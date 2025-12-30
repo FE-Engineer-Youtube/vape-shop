@@ -21,7 +21,7 @@ export function Header() {
             to="/"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <Text size="xl" fw={700}>
+            <Text size="xl" fw={700} c="blue">
               Smoke & Vape Shop
             </Text>
           </Anchor>
