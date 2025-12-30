@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Green circle background -->
+  <circle cx="32" cy="32" r="30" fill="#02b35c"/>
+  
+  <!-- White cartoon smoke in S-pattern -->
+  <g fill="#ffffff">
+    <!-- Bottom smoke puff -->
+    <ellipse cx="32" cy="48" rx="8" ry="6" opacity="0.9"/>
+    <!-- Curving up left -->
+    <ellipse cx="26" cy="40" rx="7" ry="5" opacity="0.85"/>
+    <!-- Middle left -->
+    <ellipse cx="24" cy="32" rx="6" ry="5" opacity="0.8"/>
+    <!-- Curving right -->
+    <ellipse cx="30" cy="24" rx="6" ry="4" opacity="0.75"/>
+    <!-- Middle right -->
+    <ellipse cx="36" cy="18" rx="5" ry="4" opacity="0.7"/>
+    <!-- Top curving left -->
+    <ellipse cx="34" cy="12" rx="4" ry="3" opacity="0.65"/>
+    <!-- Top puff -->
+    <ellipse cx="30" cy="8" rx="3" ry="3" opacity="0.6"/>
+  </g>
+</svg>
+
