@@ -1,5 +1,10 @@
 import type { Route } from "./+types/terms";
 import { Container, Title, Text, Stack, Paper, Anchor } from "@mantine/core";
+import { checkAgeVerification } from "~/lib/age-verification";
+
+export function clientLoader() {
+  return checkAgeVerification();
+}
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,11 +22,14 @@ export default function Terms() {
     <Container size="md" py="xl">
       <Stack gap="xl">
         <Title order={1} ta="center">
-          The Plug Vape & Smoke Shop – SMS Messaging Program Terms & Conditions
+          Terms & Conditions
         </Title>
 
         <Paper p="xl" withBorder>
           <Stack gap="lg">
+            <Title order={2} ta="center" c="dimmed">
+              SMS messaging program
+            </Title>
             <Text>
               These SMS Messaging Program Terms & Conditions ("Terms") govern
               your participation in the text messaging program ("Program")

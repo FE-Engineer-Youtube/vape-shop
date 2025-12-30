@@ -48,17 +48,32 @@ export const theme = createTheme({
     blue,
   },
   fontFamily:
-    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
   headings: {
-    fontFamily: "'Playfair Display', serif",
+    fontFamily: "'Oswald', sans-serif",
     sizes: {
       h1: { fontSize: "3rem", lineHeight: "1.2" },
-      h2: { fontSize: "2.25rem", lineHeight: "1.3" },
-      h3: { fontSize: "1.875rem", lineHeight: "1.4" },
+      h2: { fontSize: "1.75rem", lineHeight: "1.3" },
+      h3: { fontSize: "1.25rem", lineHeight: "1.4" },
     },
   },
   defaultRadius: "md",
   components: {
+    Title: {
+      defaultProps: {
+        c: undefined,
+      },
+      styles: (theme, params) => ({
+        root: {
+          ...(params.order === 1 && {
+            color: "var(--mantine-color-teal-8)",
+          }),
+          ...(params.order === 2 && {
+            color: "#000000",
+          }),
+        },
+      }),
+    },
     Container: {
       defaultProps: {
         sizes: {

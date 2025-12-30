@@ -1,5 +1,18 @@
 import type { Route } from "./+types/coa";
-import { Container, Title, Text, Stack, Paper, Alert } from "@mantine/core";
+import {
+  Container,
+  Title,
+  Text,
+  Stack,
+  Paper,
+  Alert,
+  Anchor,
+} from "@mantine/core";
+import { checkAgeVerification } from "~/lib/age-verification";
+
+export function clientLoader() {
+  return checkAgeVerification();
+}
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -45,7 +58,9 @@ export default function COA() {
             <Text>
               If you would like to request a Certificate of Analysis for any of
               our products, please contact us at{" "}
-              <a href="mailto:plugvapeshop@gmail.com">plugvapeshop@gmail.com</a>{" "}
+              <Anchor href="mailto:plugvapeshop@gmail.com">
+                plugvapeshop@gmail.com
+              </Anchor>{" "}
               with the following information:
             </Text>
             <ul>

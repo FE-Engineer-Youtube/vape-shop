@@ -6,4 +6,6 @@ export default [
   route("privacy", "routes/privacy.tsx"),
   route("coa", "routes/coa.tsx"),
   route("contact", "routes/contact.tsx"),
+  route("age-verification", "routes/age-verification.tsx"),
+  route("under-age", "routes/under-age.tsx"),
 ] satisfies RouteConfig;

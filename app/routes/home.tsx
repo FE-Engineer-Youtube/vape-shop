@@ -1,5 +1,10 @@
 import type { Route } from "./+types/home";
 import { Container, Title, Text, Stack, Group, Box } from "@mantine/core";
+import { checkAgeVerification } from "~/lib/age-verification";
+
+export function clientLoader() {
+  return checkAgeVerification();
+}
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,15 +22,15 @@ export default function Home() {
     <Container size="lg" py="xl">
       <Stack gap="xl" align="center">
         <Stack gap="md" align="center">
-          <Title order={1} size="3rem" ta="center">
+          <Title order={1} ta="center">
             The Plug
           </Title>
-          <Title order={2} size="2rem" ta="center" c="dimmed">
+          <Title order={2} ta="center" c="dimmed">
             Smoke & Vape Shop
           </Title>
         </Stack>
 
-        <Text size="xl" ta="center" fw={500}>
+        <Text size="lg" ta="center" fw={500} c="teal" mt="md">
           Anything and everything for your Smoke and Vape needs at the LOWEST
           prices!
         </Text>
@@ -36,15 +41,15 @@ export default function Home() {
           </Text>
         </Box>
 
-        <Stack gap="md" style={{ maxWidth: "800px" }}>
-          <Text size="md" ta="center">
+        <Stack gap="xl" style={{ maxWidth: "800px" }} align="center">
+          <Title order={2} ta="center">
             We have a diverse selection of CBD, Delta 8, Glass, Grinders,
             Hookah, Rolling Trays, Vapes, and so much more
-          </Text>
+          </Title>
 
-          <Text size="md" ta="center">
+          <Title order={2} ta="center">
             We strive to provide the most cutting edge products on the market!
-          </Text>
+          </Title>
         </Stack>
 
         <Group gap="xs" justify="center">

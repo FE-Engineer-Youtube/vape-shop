@@ -10,6 +10,11 @@ import {
   Group,
   Image,
 } from "@mantine/core";
+import { checkAgeVerification } from "~/lib/age-verification";
+
+export function clientLoader() {
+  return checkAgeVerification();
+}
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -57,13 +62,8 @@ export default function Contact() {
   ];
 
   const hours = [
-    { day: "Mon", hours: "9 AM - 12 AM" },
-    { day: "Tues", hours: "9 AM - 12 AM" },
-    { day: "Wed", hours: "9 AM - 12 AM" },
-    { day: "Thu", hours: "9 AM - 1 AM" },
-    { day: "Fri", hours: "9 AM - 1 AM" },
-    { day: "Sat", hours: "9 AM - 1 AM" },
-    { day: "Sun", hours: "9 AM - 12 AM" },
+    { days: "Sun - Wed", hours: "9 AM - 12 AM" },
+    { days: "Thu - Sat", hours: "9 AM - 1 AM" },
   ];
 
   return (
@@ -91,7 +91,18 @@ export default function Contact() {
                   <Grid.Col key={index} span={{ base: 12, md: 6 }}>
                     <Paper p="md" withBorder>
                       <Stack gap="xs">
-                        <Text fw={500}>{location.address}</Text>
+                        <Text fw={500}>
+                          <Anchor
+                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                              location.address
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            c="blue"
+                          >
+                            {location.address}
+                          </Anchor>
+                        </Text>
                         <Text>
                           <Anchor href={`tel:${location.phoneLink}`}>
                             {location.phone}
@@ -106,16 +117,14 @@ export default function Contact() {
 
             <Stack gap="md">
               <Title order={3}>Hours of operation</Title>
-              <Grid>
+              <Stack gap="xs">
                 {hours.map((schedule, index) => (
-                  <Grid.Col key={index} span={{ base: 12, sm: 6, md: 4 }}>
-                    <Group justify="space-between">
-                      <Text fw={500}>{schedule.day}</Text>
-                      <Text>{schedule.hours}</Text>
-                    </Group>
-                  </Grid.Col>
+                  <Group key={index} justify="space-between" wrap="nowrap">
+                    <Text fw={500}>{schedule.days}</Text>
+                    <Text>{schedule.hours}</Text>
+                  </Group>
                 ))}
-              </Grid>
+              </Stack>
             </Stack>
 
             <Stack gap="xl" mt="md">

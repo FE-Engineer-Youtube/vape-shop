@@ -8,6 +8,11 @@ import {
   Anchor,
   List,
 } from "@mantine/core";
+import { checkAgeVerification } from "~/lib/age-verification";
+
+export function clientLoader() {
+  return checkAgeVerification();
+}
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -26,10 +31,7 @@ export default function Privacy() {
       <Stack gap="xl">
         <Stack gap="xs" align="center">
           <Title order={1} ta="center">
-            Privacy Policy for The Plug Smoke & Vape
-          </Title>
-          <Title order={2} size="h3" ta="center" c="dimmed">
-            For SMS Marketing & Communications
+            Privacy Policy
           </Title>
           <Text size="sm" c="dimmed">
             Last Updated: [12/10/2025]
