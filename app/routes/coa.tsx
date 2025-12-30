@@ -7,6 +7,7 @@ import {
   Paper,
   Alert,
   Anchor,
+  Group,
 } from "@mantine/core";
 import { checkAgeVerification } from "~/lib/age-verification";
 
@@ -53,6 +54,46 @@ export default function COA() {
                 and quality control measures.
               </Text>
             </Alert>
+
+            <Title order={3}>Available COA Documents</Title>
+            <Stack gap="sm">
+              <Group>
+                <Anchor
+                  href="/pdf/8_Mile_Underground_COA.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  8 Mile Underground
+                </Anchor>
+              </Group>
+              <Group>
+                <Anchor
+                  href="/pdf/Black_Market_Diesel_COA.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Black Market Diesel
+                </Anchor>
+              </Group>
+              <Group>
+                <Anchor
+                  href="/pdf/Blackberry_Gelato_COA.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blackberry Gelato
+                </Anchor>
+              </Group>
+              <Group>
+                <Anchor
+                  href="/pdf/Strawberry_Diesel_COA.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Strawberry Diesel
+                </Anchor>
+              </Group>
+            </Stack>
 
             <Title order={3}>Requesting COA Documents</Title>
             <Text>

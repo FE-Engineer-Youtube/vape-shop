@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import { Container, Title, Text, Stack, Group, Box } from "@mantine/core";
 import { checkAgeVerification } from "~/lib/age-verification";
+import { useEffect } from "react";
 
 export function clientLoader() {
   return checkAgeVerification();
@@ -18,6 +19,23 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    // Load the review widget script
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src =
+      "https://reputationhub.site/reputation/assets/review-widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup: remove script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <Container size="lg" py="xl">
       <Stack gap="xl" align="center">
@@ -64,6 +82,17 @@ export default function Home() {
         <Text size="lg" ta="center" fw={600}>
           6 Plugs to choose from!
         </Text>
+
+        <Box mt="xl" style={{ width: "100%" }}>
+          <iframe
+            className="lc_reviews_widget"
+            src="https://reputationhub.site/reputation/widgets/review_widget/6oDyE9n7ZU8x76huyzCv?widgetId=68dd825004a8290b60d210c0"
+            frameBorder="0"
+            scrolling="no"
+            style={{ minWidth: "100%", width: "100%" }}
+            title="Google Reviews"
+          />
+        </Box>
       </Stack>
     </Container>
   );
