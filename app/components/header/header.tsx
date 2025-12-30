@@ -1,4 +1,12 @@
-import { Container, Group, Text, Anchor, Box, Stack } from "@mantine/core";
+import {
+  Container,
+  Group,
+  Text,
+  Anchor,
+  Box,
+  Stack,
+  Image,
+} from "@mantine/core";
 import { Link, useLocation } from "react-router";
 
 export function Header() {
@@ -13,7 +21,7 @@ export function Header() {
   ];
 
   return (
-    <header style={{ backgroundColor: "#f8f9fa" }}>
+    <header style={{ backgroundColor: "#ffffff" }}>
       <Container py="md">
         <Group justify="space-between" align="center" wrap="wrap" gap="md">
           <Anchor
@@ -21,9 +29,18 @@ export function Header() {
             to="/"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <Text size="xl" fw={700} c="blue">
-              Smoke & Vape Shop
-            </Text>
+            <Group gap="sm" align="center">
+              <Image
+                src="/images/logo.jpeg"
+                alt="The Plug Logo"
+                h={40}
+                w="auto"
+                fit="contain"
+              />
+              <Text size="xl" fw={700} c="blue">
+                Smoke & Vape Shop
+              </Text>
+            </Group>
           </Anchor>
           <Group gap="md" visibleFrom="sm" wrap="wrap">
             {navLinks.map((link) => (
