@@ -64,7 +64,13 @@ export default function Home() {
 
           <Box>
             <Text size="lg" ta="center" fw={600} c="blue">
-              6 Amazing Locations in South Florida!
+            <Anchor
+                component={Link}
+                to="/contact"
+                size="lg"               
+              >
+                6 Amazing Locations in South Florida!
+              </Text>
             </Text>
           </Box>
         </Stack>
@@ -72,10 +78,8 @@ export default function Home() {
           mt="xl"
           h="400px"
           w="100%"
-          style={{
-            overflow: "hidden",
-            borderRadius: "var(--mantine-radius-md)",
-          }}
+          radius="md"
+          overflow="hidden"
         >
           <Image
             maxHeight="400px"
