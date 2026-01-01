@@ -76,7 +76,9 @@ export default function Contact() {
         <Paper p="xl" withBorder>
           <Stack gap="xl">
             <Stack gap="md">
-              <Title order={2}>Contact us</Title>
+              <Title order={2} c="pink">
+                Contact us
+              </Title>
               <Text>
                 <Anchor href="mailto:plugvapeshop@gmail.com">
                   plugvapeshop@gmail.com

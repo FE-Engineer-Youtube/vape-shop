@@ -54,12 +54,12 @@ export default function Home() {
             <Title order={1} ta="center">
               The Plug
             </Title>
-            <Title order={2} ta="center" c="dimmed">
+            <Title order={2} ta="center" c="pink">
               Smoke & Vape Shop
             </Title>
           </Stack>
 
-          <Text size="lg" ta="center" fw={500} c="teal" mt="md">
+          <Text size="lg" ta="center" fw={500} c="blue" mt="md">
             Anything and everything for your Smoke and Vape needs at the LOWEST
             prices!
           </Text>
@@ -70,7 +70,7 @@ export default function Home() {
                 component={Link}
                 to="/contact"
                 size="lg"
-                c="blue"
+                c="teal"
                 td="underline"
               >
                 6 Amazing Locations in South Florida!
@@ -78,11 +78,10 @@ export default function Home() {
             </Text>
           </Box>
         </Stack>
-        <Box mt="xl" h="400px" w="100%" radius="md" overflow="hidden">
+        <Box mt="xl" h="400px">
           <Image
-            maxHeight="400px"
-            h="100%"
-            w="100%"
+            h="400px"
+            radius="md"
             fit="cover"
             src="/images/Pompano_Store.png"
             alt="Pompano Store"
@@ -95,7 +94,7 @@ export default function Home() {
 
       <Box w="100%" py="xl" bg="teal.6">
         <Container size="lg">
-          <Text size="lg" ta="center" fw={500} c="white">
+          <Text size="lg" ta="center" fw={500} c="pink">
             We have a diverse selection of CBD, Delta 8, Glass, Grinders,
             Hookah, Rolling Trays, Vapes, and so much more
           </Text>

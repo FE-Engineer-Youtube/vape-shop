@@ -41,7 +41,8 @@ const blue = [
 ] as const;
 
 export const theme = createTheme({
-  primaryColor: "pink",
+  primaryColor: "teal",
+  primaryShade: 6,
   colors: {
     pink,
     teal,

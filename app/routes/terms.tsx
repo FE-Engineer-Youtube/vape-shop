@@ -27,7 +27,7 @@ export default function Terms() {
 
         <Paper p="xl" withBorder>
           <Stack gap="lg">
-            <Title order={2} ta="center" c="dimmed">
+            <Title order={2} ta="center" c="pink">
               SMS messaging program
             </Title>
             <Text>
