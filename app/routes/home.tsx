@@ -1,10 +1,12 @@
 import type { Route } from "./+types/home";
+import { Link } from "react-router";
 import {
   Container,
   Title,
   Text,
   Stack,
   Group,
+  Anchor,
   Box,
   Image,
 } from "@mantine/core";
@@ -64,23 +66,19 @@ export default function Home() {
 
           <Box>
             <Text size="lg" ta="center" fw={600} c="blue">
-            <Anchor
+              <Anchor
                 component={Link}
                 to="/contact"
-                size="lg"               
+                size="lg"
+                c="blue"
+                td="underline"
               >
                 6 Amazing Locations in South Florida!
-              </Text>
+              </Anchor>
             </Text>
           </Box>
         </Stack>
-        <Box
-          mt="xl"
-          h="400px"
-          w="100%"
-          radius="md"
-          overflow="hidden"
-        >
+        <Box mt="xl" h="400px" w="100%" radius="md" overflow="hidden">
           <Image
             maxHeight="400px"
             h="100%"
