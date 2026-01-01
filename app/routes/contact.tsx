@@ -134,7 +134,7 @@ export default function Contact() {
                   alt="Hookah and Kratom products"
                   radius="md"
                 />
-                <Text size="lg" fw={500} ta="center" c="pink">
+                <Text size="lg" fw={500} ta="center" c="blue">
                   We carry a huge selection of Hookah and Kratom!
                 </Text>
               </Stack>
