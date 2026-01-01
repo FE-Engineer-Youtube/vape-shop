@@ -99,6 +99,7 @@ export default function Contact() {
                             target="_blank"
                             rel="noopener noreferrer"
                             c="blue"
+                            td="underline"
                           >
                             {location.address}
                           </Anchor>
