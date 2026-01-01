@@ -27,7 +27,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Privacy() {
   return (
-    <Container size="md" py="xl">
+    <Container size="lg" py="xl">
       <Stack gap="xl">
         <Stack gap="xs" align="center">
           <Title order={1} ta="center">

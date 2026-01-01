@@ -19,7 +19,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Terms() {
   return (
-    <Container size="md" py="xl">
+    <Container size="lg" py="xl">
       <Stack gap="xl">
         <Title order={1} ta="center">
           Terms & Conditions

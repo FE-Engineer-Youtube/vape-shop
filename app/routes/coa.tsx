@@ -28,7 +28,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function COA() {
   return (
-    <Container size="md" py="xl">
+    <Container size="lg" py="xl">
       <Stack gap="xl">
         <Title order={1} ta="center">
           COA Information
