@@ -21,7 +21,7 @@ export function Footer() {
         style={{
           height: "3px",
           width: "100%",
-          background: "linear-gradient(to right, #02b35c, #339af0)",
+          background: `linear-gradient(to right, var(--mantine-color-teal-5), var(--mantine-color-blue-5))`,
         }}
       />
       <Container py="xl">

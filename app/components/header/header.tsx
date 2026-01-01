@@ -48,7 +48,7 @@ export function Header() {
                 key={link.to}
                 component={Link}
                 to={link.to}
-                size="sm"
+                size="md"
                 style={{
                   fontWeight: location.pathname === link.to ? 600 : 400,
                   textDecoration:
@@ -82,7 +82,7 @@ export function Header() {
         style={{
           height: "3px",
           width: "100%",
-          background: "linear-gradient(to right, #02b35c, #339af0)",
+          background: `linear-gradient(to right, var(--mantine-color-teal-5), var(--mantine-color-blue-5))`,
         }}
       />
     </header>
