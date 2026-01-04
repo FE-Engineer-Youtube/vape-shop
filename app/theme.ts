@@ -21,23 +21,23 @@ const teal = [
   "#4dffdc",
   "#1affd2",
   "#02b35c", // Main teal/green color from website
-  "#00cc66",
-  "#00b359",
-  "#00994d",
-  "#008040",
+  "#007e70", // Darker teal from website
+  "#0b645a", // Dark teal from website
+  "#2a4a46", // Darkest teal background from website
+  "#1a3a36",
 ] as const;
 
 const blue = [
-  "#e7f5ff",
-  "#d0ebff",
-  "#a5d8ff",
-  "#74c0fc",
-  "#4dabf7",
-  "#339af0",
-  "#228be6",
-  "#1c7ed6",
-  "#1971c2",
-  "#1864ab",
+  "#e0f7ff",
+  "#b3f0ff",
+  "#80e8ff",
+  "#4de0ff",
+  "#1ad8ff",
+  "#02b7dd", // Cyan blue from website
+  "#00a8cc",
+  "#0099bb",
+  "#0088aa",
+  "#007799",
 ] as const;
 
 export const theme = createTheme({

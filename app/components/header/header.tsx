@@ -37,7 +37,7 @@ export function Header() {
                 w="auto"
                 fit="contain"
               />
-              <Text size="xl" fw={700} c="blue">
+              <Text size="xl" fw={700} c="black" style={{ opacity: 0.8 }}>
                 Smoke & Vape Shop
               </Text>
             </Group>
@@ -82,7 +82,7 @@ export function Header() {
         style={{
           height: "3px",
           width: "100%",
-          background: `linear-gradient(to right, var(--mantine-color-teal-5), var(--mantine-color-blue-5))`,
+          background: `linear-gradient(to right, var(--mantine-color-blue-5), #ec008c)`,
         }}
       />
     </header>

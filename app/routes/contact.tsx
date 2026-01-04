@@ -22,7 +22,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Contact The Plug Smoke & Vape Shop. 6 Amazing Locations in South Florida!",
+        "Contact The Plug Smoke & Vape Shop. 7 Amazing Locations in South Florida!",
     },
   ];
 }
@@ -59,6 +59,11 @@ export default function Contact() {
       phone: "(954) 876-1938",
       phoneLink: "+19548761938",
     },
+    {
+      address: "6293 Countyline Road, Miramar, FL 33023",
+      phone: "Coming soon",
+      phoneLink: "",
+    },
   ];
 
   const hours = [
@@ -70,7 +75,7 @@ export default function Contact() {
     <Container size="lg" py="xl">
       <Stack gap="xl">
         <Title order={1} ta="center">
-          6 Amazing Locations in South Florida!
+          7 Amazing Locations in South Florida!
         </Title>
 
         <Paper p="xl" withBorder>
@@ -100,16 +105,20 @@ export default function Contact() {
                             )}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            c="blue"
+                            c="blue.5"
                             td="underline"
                           >
                             {location.address}
                           </Anchor>
                         </Text>
                         <Text>
-                          <Anchor href={`tel:${location.phoneLink}`}>
-                            {location.phone}
-                          </Anchor>
+                          {location.phoneLink ? (
+                            <Anchor href={`tel:${location.phoneLink}`}>
+                              {location.phone}
+                            </Anchor>
+                          ) : (
+                            location.phone
+                          )}
                         </Text>
                       </Stack>
                     </Paper>
@@ -137,7 +146,7 @@ export default function Contact() {
                   alt="Hookah and Kratom products"
                   radius="md"
                 />
-                <Text size="lg" fw={500} ta="center" c="blue">
+                <Text size="lg" fw={500} ta="center" c="blue.5">
                   We carry a huge selection of Hookah and Kratom!
                 </Text>
               </Stack>

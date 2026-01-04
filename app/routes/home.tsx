@@ -23,7 +23,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Anything and everything for your Smoke and Vape needs at the LOWEST prices! 6 Amazing Locations in South Florida!",
+        "Anything and everything for your Smoke and Vape needs at the LOWEST prices! 7 Amazing Locations in South Florida!",
     },
   ];
 }
@@ -51,7 +51,7 @@ export default function Home() {
       <Container size="lg" py="xl">
         <Stack gap="xl" align="center">
           <Stack gap="md" align="center">
-            <Title order={1} ta="center">
+            <Title order={1} ta="center" c="teal.5">
               The Plug
             </Title>
             <Title order={2} ta="center" c="pink">
@@ -59,25 +59,45 @@ export default function Home() {
             </Title>
           </Stack>
 
-          <Text size="lg" ta="center" fw={500} c="blue" mt="md">
+          <Text size="lg" ta="center" fw={500} c="blue.5" mt="md">
             Anything and everything for your Smoke and Vape needs at the LOWEST
             prices!
           </Text>
-
-          <Box>
-            <Text size="lg" ta="center" fw={600} c="blue">
-              <Anchor
-                component={Link}
-                to="/contact"
-                size="lg"
-                c="teal"
-                td="underline"
-              >
-                6 Amazing Locations in South Florida!
-              </Anchor>
-            </Text>
-          </Box>
         </Stack>
+      </Container>
+
+      <Box
+        w="100%"
+        h="5rem"
+        bg="teal.8"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          style={{
+            padding: "6px 72px",
+            backgroundColor: "white",
+            borderRadius: "var(--mantine-radius-md)",
+          }}
+        >
+          <Text size="lg" ta="center" fw={600}>
+            <Anchor
+              component={Link}
+              to="/contact"
+              size="lg"
+              c="teal"
+              td="underline"
+            >
+              7 Amazing Locations in South Florida!
+            </Anchor>
+          </Text>
+        </Box>
+      </Box>
+
+      <Container size="lg" py="xl">
         <Box mt="xl" h="400px">
           <Image
             h="400px"
@@ -92,24 +112,31 @@ export default function Home() {
         </Box>
       </Container>
 
-      <Box w="100%" py="xl" bg="teal.6">
+      <Container size="lg" py="xl">
+        <Text size="lg" ta="center" fw={500} c="pink">
+          We have a diverse selection of CBD, Delta 8, Glass, Grinders, Hookah,
+          Rolling Trays, Vapes, and so much more
+        </Text>
+      </Container>
+
+      <Box w="100%" py="xl" bg="teal.8">
         <Container size="lg">
-          <Text size="lg" ta="center" fw={500} c="pink">
-            We have a diverse selection of CBD, Delta 8, Glass, Grinders,
-            Hookah, Rolling Trays, Vapes, and so much more
-          </Text>
+          <Stack gap="xl" align="center">
+            <Stack gap="xl" style={{ maxWidth: "800px" }} align="center">
+              <Title order={2} ta="center" style={{ color: "white" }}>
+                We strive to provide the most{" "}
+                <span style={{ color: "#00ffff" }}>cutting edge products</span>{" "}
+                on the market!
+              </Title>
+            </Stack>
+          </Stack>
         </Container>
       </Box>
 
       <Container size="lg" py="xl">
         <Stack gap="xl" align="center">
-          <Stack gap="xl" style={{ maxWidth: "800px" }} align="center">
-            <Title order={2} ta="center">
-              We strive to provide the most cutting edge products on the market!
-            </Title>
-          </Stack>
-
           <Group gap="xs" justify="center">
+            <Text size="2rem">🔌</Text>
             <Text size="2rem">🔌</Text>
             <Text size="2rem">🔌</Text>
             <Text size="2rem">🔌</Text>
@@ -119,9 +146,15 @@ export default function Home() {
           </Group>
 
           <Text size="lg" ta="center" fw={600}>
-            6 Plugs to choose from!
+            7 Plugs to choose from!
           </Text>
+        </Stack>
+      </Container>
 
+      <Box w="100%" h="3rem" bg="teal.8" />
+
+      <Container size="lg" py="xl">
+        <Stack gap="xl" align="center">
           <Box mt="xl" style={{ width: "100%" }}>
             <iframe
               className="lc_reviews_widget"
