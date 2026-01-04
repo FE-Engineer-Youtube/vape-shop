@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header style={{ backgroundColor: "#ffffff" }}>
-      <Container py="md">
+      <Container size="lg" py="md">
         <Group justify="space-between" align="center" wrap="wrap" gap="md">
           <Anchor
             component={Link}

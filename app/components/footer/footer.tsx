@@ -24,7 +24,7 @@ export function Footer() {
           background: `linear-gradient(to right, var(--mantine-color-blue-5), #ec008c)`,
         }}
       />
-      <Container py="xl">
+      <Container size="lg" py="xl">
         <Stack gap="md">
           <Group justify="space-between" align="flex-start">
             <Stack gap="xs">
