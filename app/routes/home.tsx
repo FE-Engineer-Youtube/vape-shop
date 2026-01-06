@@ -105,9 +105,6 @@ export default function Home() {
             fit="cover"
             src="/images/Pompano_Store.png"
             alt="Pompano Store"
-            style={{
-              objectPosition: "center calc(50% - 70px)",
-            }}
           />
         </Box>
       </Container>
