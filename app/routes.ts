@@ -8,4 +8,6 @@ export default [
   route("contact", "routes/contact.tsx"),
   route("age-verification", "routes/age-verification.tsx"),
   route("under-age", "routes/under-age.tsx"),
+  route("robots.txt", "routes/robots.txt.tsx"),
+  route("sitemap.xml", "routes/sitemap.xml.tsx"),
 ] satisfies RouteConfig;
