@@ -97,7 +97,7 @@ export default function Terms() {
                 </Anchor>
               </Text>
               <Text>
-                Phone: <Anchor href="tel:+15559876543">(555) 987-6543</Anchor>
+                Phone: <Anchor href="tel:+15617174692">(561) 717-4692</Anchor>
               </Text>
             </Stack>
 
