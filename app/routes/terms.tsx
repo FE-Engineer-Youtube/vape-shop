@@ -92,8 +92,8 @@ export default function Terms() {
             <Stack gap="xs" pl="md">
               <Text>
                 Email:{" "}
-                <Anchor href="mailto:support@theplugvape.com">
-                  support@theplugvape.com
+                <Anchor href="mailto:plugvapeshop@gmail.com">
+                  Plugvapeshop@gmail.com
                 </Anchor>
               </Text>
               <Text>
